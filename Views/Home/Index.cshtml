@@ -4,7 +4,7 @@
 
 @if (User.Identity.IsAuthenticated)
 {
-    <p>@User.Identity.Name</p>
+    <p>Авторизован как @User.Identity.Name</p>
 
     <form method="post" class="form-group" asp-controller="Account" asp-action="Logout">
         <input type="submit" value="Выход" class="form-control"/>
@@ -12,6 +12,6 @@
 }
 else
 {
-    <a class="form-control" asp-controller="Account" asp-action="Login">Вход</a>
-    <a class="form-control" asp-controller="Account" asp-action="Register">Регистрация</a>
+    <a class="btn btn-primary" asp-controller="Account" asp-action="Login">Вход</a>
+    <a class="btn btn-primary" asp-controller="Account" asp-action="Register">Регистрация</a>
 }
