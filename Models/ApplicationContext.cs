@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace IdentityApp.Models
 {
-    public class ApplicationContext : IdentityDbContext
+    public class ApplicationContext : IdentityDbContext<User>
     {
         public ApplicationContext(DbContextOptions<ApplicationContext> options) : base(options)
             => Database.EnsureCreated();

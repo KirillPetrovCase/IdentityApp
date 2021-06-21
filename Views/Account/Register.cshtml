@@ -1,0 +1,35 @@
+﻿@model IdentityApp.ViewModels.RegisterViewModel
+<div class="d-flex justify-content-center">
+    <form method="post" class="p-4 border rounded-3 bg-light w-50" asp-controller="Account" asp-action="Register">
+        <div asp-validation-summary="ModelOnly"></div>
+        <h3 class="fw-bold lh-1 mb-3">Регистрация нового пользователя</h3>
+        <div class="form-floating mb-1">
+            <label asp-for="Name"></label>
+            <input class="form-control" asp-for="Name" />
+            <span asp-validation-for="Name"></span>
+        </div>
+        <div class="form-floating mb-1">
+            <label asp-for="Email"></label>
+            <input class="form-control" asp-for="Email" />
+            <span asp-validation-for="Email"></span>
+        </div>
+        <div class="form-floating mb-1">
+            <label asp-for="BirthYear"></label>
+            <input class="form-control" asp-for="BirthYear" />
+            <span asp-validation-for="BirthYear"></span>
+        </div>
+        <div class="form-floating mb-1">
+            <label asp-for="Password"></label>
+            <input class="form-control" asp-for="Password" />
+            <span asp-validation-for="Password"></span>
+        </div>
+        <div class="form-floating mb-1">
+            <label asp-for="PasswordConfirm"></label>
+            <input class="form-control" asp-for="PasswordConfirm" />
+            <span asp-validation-for="PasswordConfirm"></span>
+        </div>
+        <div>
+            <input class="w-100 btn btn-lg btn-primary" type="submit" value="Регистрация" />
+        </div>
+    </form>
+</div>
